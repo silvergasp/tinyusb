@@ -27,4 +27,10 @@ cov-int
 *-build-dir
 /_bin/
 __pycache__
+.cache
 
+# Fuzzing artifacts
+crash-*
+slow-unit-*
+*_corpus
+*_artifacts
