@@ -40,14 +40,17 @@ SRC_C += \
 
 # Fuzzers are c++
 SRC_CXX += \
-	fuzz/dcd_fuzz.cc \
-	fuzz/fuzz.cc \
-	fuzz/msc_fuzz.cc \
-	fuzz/net_fuzz.cc \
-	fuzz/usbd_fuzz.cc
+	test/fuzz/dcd_fuzz.cc \
+	test/fuzz/fuzz.cc \
+	test/fuzz/msc_fuzz.cc \
+	test/fuzz/net_fuzz.cc \
+	test/fuzz/usbd_fuzz.cc
 
 # TinyUSB stack include
 INC += $(TOP)/src
+
+# Fuzzing lib include 
+INC += $(TOP)/test
 
 CFLAGS += $(addprefix -I,$(INC))
 CXXFLAGS += -std=c++17
